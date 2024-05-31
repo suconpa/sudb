@@ -3,17 +3,15 @@ require("dotenv").config({ path: "local.env" });
 const express = require("express");
 const mongoose = require("mongoose");
 const server = express();
-const User = require("./models/User");
+const User = require("./Model/User.js");
 server.get("/api/user", (req, res) => {
   const newUser1 = new User();
-  newUser.email = "test2@test.com";
-  newUser.name = "sua";
-  newUser.age = 32;
-  newUser
+  newUser1.email = "test3@test.com";
+  newUser1.name = "sua";
+  newUser1.age = 32;
+  newUser1
     .save()
     .then((data) => {
-      d;
-      console.log(data);
       res.json({
         massage: "user created",
       });
